@@ -770,6 +770,30 @@ video {
   max-width: 768px;
 }
 
+.max-w-\[\] {
+  max-width: ;
+}
+
+.max-w-\[750px\] {
+  max-width: 750px;
+}
+
+.max-w-\[991px\] {
+  max-width: 991px;
+}
+
+.max-w-\[1px\] {
+  max-width: 1px;
+}
+
+.max-w-\[1080px\] {
+  max-width: 1080px;
+}
+
+.max-w-\[576px\] {
+  max-width: 576px;
+}
+
 .flex-shrink-0 {
   flex-shrink: 0;
 }
@@ -808,6 +832,10 @@ video {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .space-x-3 > :not([hidden]) ~ :not([hidden]) {
@@ -881,6 +909,11 @@ video {
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
 
+.bg-\[\#000\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#013DE6\] {
   --tw-bg-opacity: 1;
   background-color: rgb(1 61 230 / var(--tw-bg-opacity));
@@ -901,7 +934,7 @@ video {
 
 .bg-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(1 61 230 / var(--tw-bg-opacity));
+  background-color: rgb(7 7 9 / var(--tw-bg-opacity));
 }
 
 .bg-warning {
@@ -912,6 +945,52 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#070709\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(7 7 9 / var(--tw-bg-opacity));
+}
+
+.bg-\[\] {
+  background-color: ;
+}
+
+.bg-\[\#50\] {
+  background-color: #50;
+}
+
+.bg-\[\#5048\] {
+  background-color: #5048;
+}
+
+.bg-\[\#5048e5\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(80 72 229 / var(--tw-bg-opacity));
+}
+
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.bg-gray-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#1f2937\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#\] {
+  background-color: #;
+}
+
+.bg-\[\#013de6\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(1 61 230 / var(--tw-bg-opacity));
 }
 
 .p-2 {
@@ -1054,7 +1133,7 @@ video {
 
 .text-primary {
   --tw-text-opacity: 1;
-  color: rgb(1 61 230 / var(--tw-text-opacity));
+  color: rgb(7 7 9 / var(--tw-text-opacity));
 }
 
 .text-title {
@@ -1101,7 +1180,7 @@ section {
 /* Hamburger Menu */
 
 .hero {
-  background: #013DE6;
+  background: #070709;
 }
 
 .desc {
@@ -1208,7 +1287,7 @@ section {
 .scroll-to-top {
   width: 50px;
   height: 50px;
-  background: #013DE6;
+  background: #013de6;
   border-radius: 100px;
   position: fixed;
   right: 30px;

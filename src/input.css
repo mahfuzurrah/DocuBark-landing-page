@@ -29,7 +29,7 @@ section {
 /* Hamburger Menu */
 
 .hero {
-  background: #013DE6;
+  background: #070709;
 }
 .desc {
   display: -webkit-box;
@@ -134,7 +134,7 @@ section {
 .scroll-to-top {
   width: 50px;
   height: 50px;
-  background: #013DE6;
+  background: #013de6;
   border-radius: 100px;
   position: fixed;
   right: 30px;

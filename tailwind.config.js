@@ -7,7 +7,7 @@ module.exports = {
         bannerH: "75vh",
       },
       colors: {
-        primary: "#013DE6",
+        primary: "#070709",
         // secondary: '#1C0950',
         title: "#1C0950",
         desc: "#506690",
