@@ -1,733 +1,1027 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DocuBark</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DocuBark</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
 
-  <link rel="stylesheet" href="./src/output.css" />
-</head>
-
-<body>
-  <div class="scroll-to-top show flex items-center justify-center">
-    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#ffffff" class="bi bi-arrow-up-short"
-      viewBox="0 0 16 16">
-      <path fill-rule="evenodd"
-        d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z" />
-    </svg>
-  </div>
-  <!-- Navbar -->
-  <nav id="navbar" class="sticky top-0 w-full z-50 bg-[#000] py-6">
-    <!-- Flex container -->
-    <div class="container flex items-center justify-between mx-auto p-5">
-      <div class="pt-2">
-        <a href="#" class="logo1 text-[34px] font-semibold text-white">DocuBark</a>
-      </div>
-      <div class="hidden space-x-6 md:flex">
-        <a href="#home" class="text-white text-[17px] font-medium">Home</a>
-        <a href="#features" class="text-white text-[17px] font-medium">Features
-        </a>
-        <a href="#why-docuBark" class="text-white text-[17px] font-medium">Why DocuBark</a>
-        <a href="#pricing" class="text-white text-[17px] font-medium">Pricing</a>
-        <a href="#contact" class="text-white text-[17px] font-medium">Contact Us</a>
-        <a href="https://app.docubark.com/login" class="text-white text-[17px] font-medium">Log In</a>
-      </div>
-      <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
-        <span class="hamburger-top"></span>
-        <span class="hamburger-middle"></span>
-        <span class="hamburger-bottom"></span>
-      </button>
+  <body>
+    <div class="scroll-to-top show flex items-center justify-center">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+        fill="#ffffff"
+        class="bi bi-arrow-up-short"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"
+        />
+      </svg>
     </div>
-
-    <!-- Mobile Menu -->
-    <div class="md:hidden">
-      <div id="menu"
-        class="absolute bg-primary h-screen hidden self-end w-full sm:w-auto sm:self-center left-0 right-0 p-8 border-t mt-[20px]">
-        <div class="flex flex-col font-bold gap-8">
+    <!-- Navbar -->
+    <nav id="navbar" class="sticky top-0 w-full z-50 bg-[#000] py-6">
+      <!-- Flex container -->
+      <div class="container flex items-center justify-between mx-auto p-5">
+        <div class="pt-2">
+          <a href="#" class="logo1 text-[34px] font-semibold text-white"
+            >DocuBark</a
+          >
+        </div>
+        <div class="hidden space-x-6 md:flex">
           <a href="#home" class="text-white text-[17px] font-medium">Home</a>
-          <a href="#features" class="text-white text-[17px] font-medium">Features
+          <a href="#features" class="text-white text-[17px] font-medium"
+            >Features
           </a>
-          <a href="#why-docuBark" class="text-white text-[17px] font-medium">Why DocuBark</a>
-          <a href="#pricing" class="text-white text-[17px] font-medium">Pricing</a>
-          <a href="#contact" class="text-white text-[17px] font-medium">Contact Us</a>
-          <a href="https://app.docubark.com/login" class="text-white text-[17px] font-medium">Log In</a>
+          <a href="#why-docuBark" class="text-white text-[17px] font-medium"
+            >Why DocuBark</a
+          >
+          <a href="#pricing" class="text-white text-[17px] font-medium"
+            >Pricing</a
+          >
+          <a href="#contact" class="text-white text-[17px] font-medium"
+            >Contact Us</a
+          >
+          <a
+            href="https://app.docubark.com/login"
+            class="text-white text-[17px] font-medium"
+            >Log In</a
+          >
         </div>
+        <button
+          id="menu-btn"
+          class="block hamburger md:hidden focus:outline-none"
+        >
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
       </div>
-    </div>
-  </nav>
 
-  <div class="main">
-    <!-- Hero Section -->
-    <section class="relative md:pt-32 lg:pt-16 text-center lg:text-left">
-      <!-- Flex Container -->
-      <div class="hero absolute top-0 w-full h-[70vh]"></div>
-      <div class="container mx-auto p-5 relative">
-        <div class="flex flex-col w-full mb-7 lg:mb-0 text-center max-w-[1080px] m-auto">
-          <h2 class="text-white font-bold lg:text-h2 text-h4">
-            Stop Chasing Vendors - Get Security Questionnaire Answers
-            Immediately
-          </h2>
-          <p class="text-white mb-12 max-w-[576px] m-auto">
-            DocuBark parses vendor documents, answers your security questions,
-            and ensures a detailed assessment of each vendor’s risk profile.
-          </p>
-          <div class="flex items-center gap-5 justify-center">
-            <a href="https://app.docubark.com/Signup"
-              class="p-4 px-6 text-title bg-white rounded-lg baseline hover:bg-brightRedLight font-medium">Explore
-              the Platform
+      <!-- Mobile Menu -->
+      <div class="md:hidden">
+        <div
+          id="menu"
+          class="absolute bg-primary h-screen hidden self-end w-full sm:w-auto sm:self-center left-0 right-0 p-8 border-t mt-[20px]"
+        >
+          <div class="flex flex-col font-bold gap-8">
+            <a href="#home" class="text-white text-[17px] font-medium">Home</a>
+            <a href="#features" class="text-white text-[17px] font-medium"
+              >Features
             </a>
-            <a href="https://docubark.setmore.com/"
-              class="p-4 px-6 text-title bg-white rounded-lg baseline hover:bg-brightRedLight font-medium">Book a demo
-            </a>
-          </div>
-        </div>
-        <div class="mx-auto mt-[50px]">
-          <img class="border-[10px] rounded-[24px]" src="./img/Dahboard.jpeg" alt="" />
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container w-full">
-        <div class="text-center">
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-black">
-            Trusted By Leading Enterprises
-          </h2>
-          <p>
-            DocuBark integrates with your system of record, making the process
-            smoother.
-          </p>
-        </div>
-        <div class="flex items-center justify-center md:justify-between flex-wrap gap-6 w-full mt-8">
-          <img class="h-[50px] w-auto" src="./img/logo/Brand 1.png" alt="Brand 1" />
-          <img class="h-[50px] w-auto" src="./img/logo/Brand 2.png" alt="Brand 2" />
-          <img class="h-[50px] w-auto" src="./img/logo/Brand 3.png" alt="Brand 3" />
-          <img class="h-[50px] w-auto" src="./img/logo/Brand 4.png" alt="Brand 4" />
-          <img class="h-[50px] w-auto" src="./img/logo/Brand 5.png" alt="Brand 5" />
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-white" id="features">
-      <div class="container">
-        <div class="mb-8 lg:mb-16 text-center">
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
-            AI Powered TPRM Due Diligence
-          </h2>
-        </div>
-        <div class="space-y-5 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-5 md:space-y-0">
-          <!-- Card 1 -->
-          <div class="p-4 bg-white border rounded-2xl">
-            <h3 class="mb-2 text-xl font-bold text-title">
-              No More Vendor Delays
-            </h3>
-            <p class="text-desc mb-5 desc">
-              DocuBark extracts data from vendor documents to complete your
-              security questionnaire faster.
-            </p>
-            <img class="mt-6" src="./img/progress.png" alt="" />
-          </div>
-
-          <!-- Card 2 -->
-          <div class="p-4 bg-white border rounded-2xl">
-            <h3 class="mb-2 text-xl font-bold text-title">
-              Reliable, Verified Data
-            </h3>
-            <p class="text-desc mb-5 desc">
-              DocuBark uses official vendor documents, giving you accurate
-              answers every time.
-            </p>
-            <img class="mt-6" src="./img/area.svg" alt="" />
-          </div>
-
-          <!-- Card 3 -->
-          <div class="p-4 bg-white border rounded-2xl">
-            <h3 class="mb-2 text-xl font-bold text-title">
-              Let AI Do the Work
-            </h3>
-            <p class="text-desc mb-5 desc">
-              DocuBark’s AI analyzes responses and scores vendors on key
-              controls, saving you time.
-            </p>
-            <img class="mt-6" src="./img/bar.png" alt="" />
-          </div>
-
-          <!-- Card 4 -->
-          <div class="p-4 bg-white border rounded-2xl">
-            <h3 class="mb-2 text-xl font-bold text-title">
-              Full Audit Trail
-            </h3>
-            <p class="text-desc mb-5 desc">
-              Get a complete assessment with vendor scores, summaries, and
-              follow-up actions, all audit-ready.
-            </p>
-            <img class="mt-6" src="./img/Group 4.png" alt="" />
+            <a href="#why-docuBark" class="text-white text-[17px] font-medium"
+              >Why DocuBark</a
+            >
+            <a href="#pricing" class="text-white text-[17px] font-medium"
+              >Pricing</a
+            >
+            <a href="#contact" class="text-white text-[17px] font-medium"
+              >Contact Us</a
+            >
+            <a
+              href="https://app.docubark.com/login"
+              class="text-white text-[17px] font-medium"
+              >Log In</a
+            >
           </div>
         </div>
       </div>
-    </section>
+    </nav>
 
-    <section class="bg-white" id="why-docuBark">
-      <div class="container">
-        <div class="mb-8 lg:mb-16 text-center max-w-[650px] m-auto">
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
-            Why DocuBark?
-          </h2>
-          <p>
-            DocuBark uses advanced AI to quickly parse vendor documents, fill
-            out questionnaires, and deliver accurate insights — saving you
-            time on every review.
-          </p>
-        </div>
-        <div class="space-y-5 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5 md:space-y-0">
-          <div class="p-4 bg-white border rounded-2xl">
-            <div
-              class="flex justify-center items-center mb-4 w-[50px] h-[50px] rounded-full bg-primary lg:h-12 lg:w-12">
-              <iconify-icon icon="mdi:code" class="text-[24px] text-white"></iconify-icon>
-            </div>
-            <h3 class="mb-2 text-xl font-bold">Easy to Use</h3>
-            <p class="text-desc">
-              No complex setup needed. Just upload your documents, and
-              DocuBark starts working right away, making it easy to get
-              results in minutes.
-            </p>
-          </div>
-
-          <div class="p-4 bg-white border rounded-2xl">
-            <div
-              class="flex justify-center items-center mb-4 w-[50px] h-[50px] rounded-full bg-primary lg:h-12 lg:w-12">
-              <iconify-icon icon="mdi:code" class="text-[24px] text-white"></iconify-icon>
-            </div>
-            <h3 class="mb-2 text-xl font-bold">Safe & Transparent AI</h3>
-            <p class="text-desc">
-              DocuBark’s "Show Your Work" AI gives you visibility into each
-              answer, showing sources and reasoning so you can trust every
-              result.
-            </p>
-          </div>
-          <div class="p-4 bg-white border rounded-2xl">
-            <div
-              class="flex justify-center items-center mb-4 w-[50px] h-[50px] rounded-full bg-primary lg:h-12 lg:w-12">
-              <iconify-icon icon="mdi:code" class="text-[24px] text-white"></iconify-icon>
-            </div>
-            <h3 class="mb-2 text-xl font-bold">Customizable to Your Needs</h3>
-            <p class="text-desc">
-              Adjust DocuBark to suit your process—from custom prompts to
-              tailored questionnaire settings, it adapts to fit your workflow.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="pricing" class="bg-[#070709]">
-      <div class="container">
-        <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">
-            Direct, upfront pricing
-          </h2>
-          <p class="text-white">
-            No guesswork or hidden fees. Just transparent pricing plans.
-          </p>
-        </div>
-        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 xl:gap-10 lg:space-y-0">
-          <!-- Pricing Card -->
+    <div class="main">
+      <!-- Hero Section -->
+      <section class="relative md:pt-32 lg:pt-16 text-center lg:text-left">
+        <!-- Flex Container -->
+        <div class="hero absolute top-0 w-full h-[70vh]"></div>
+        <div class="container mx-auto p-5 relative">
           <div
-            class="flex flex-col p-2 mx-auto max-w-lg text-center text-white bg-[#ffffff21] rounded-lg border border-gray-100 shadow w-full">
-            <div class="p-4 bg-[#ffffff15] rounded-md h-[120px]">
-              <h3 class="text-2xl font-semibold">Growth</h3>
-              <div class="flex justify-center items-baseline mt-4">
-                <span class="mr-2 text-4xl font-extrabold">$7,500</span>
-                <span class="text-white">/yr</span>
-              </div>
+            class="flex flex-col w-full mb-7 lg:mb-0 text-center max-w-[1080px] m-auto"
+          >
+            <h2 class="text-white font-bold lg:text-h2 text-h4">
+              Stop Chasing Vendors - Get Security Questionnaire Answers
+              Immediately
+            </h2>
+            <p
+              class="text-white mb-12 max-w-[576px] m-auto text-[17px] font-medium"
+            >
+              DocuBark parses vendor documents, answers your security questions,
+              and ensures a detailed assessment of each vendor’s risk profile.
+            </p>
+            <div class="flex items-center gap-5 justify-center">
+              <a
+                href="https://app.docubark.com/Signup"
+                class="p-4 px-6 text-title bg-white rounded-lg baseline hover:bg-brightRedLight font-medium"
+                >Explore the Platform
+              </a>
+              <a
+                href="https://docubark.setmore.com/"
+                class="p-4 px-6 text-title bg-white rounded-lg baseline hover:bg-brightRedLight font-medium"
+                >Book a demo
+              </a>
             </div>
-            <p class="mt-5 text-[24px]">5,000 Questions Included</p>
-            <h6 class="text-h6 font-semibold mt-5 bg-[#ffffff15] py-2">
-              Core features:
-            </h6>
-            <!-- List -->
-            <ul role="list" class="my-8 space-y-4 text-left px-3">
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Unlimited Users</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Unlimited Vendors</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Custom Integrations</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>SAML Integration </span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Assessment Report</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Risk Scoring</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Search AI</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Questionnaire Templates</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Control Grading</span>
-              </li>
-            </ul>
           </div>
-          <!-- Pricing Card -->
+          <div class="mx-auto mt-[50px]">
+            <img
+              class="border-[10px] rounded-[24px]"
+              src="./img/Dahboard.jpeg"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container w-full">
+          <div class="text-center">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-black">
+              Trusted By Leading Enterprises
+            </h2>
+          </div>
           <div
-            class="flex flex-col p-2 mx-auto max-w-lg text-center text-white bg-[#ffffff21] rounded-lg border border-gray-100 shadow w-full">
-            <div class="p-4 bg-[#ffffff15] rounded-md h-[120px]">
-              <h3 class="text-2xl font-semibold">Scale</h3>
-              <div class="flex justify-center items-baseline mt-4">
-                <span class="mr-2 text-4xl font-extrabold">$10,000</span>
-                <span class="text-white">/yr</span>
-              </div>
-            </div>
-            <p class="mt-5 text-[24px]">10,000 Questions Included</p>
-            <h6 class="text-h6 font-semibold mt-5 bg-[#ffffff15] py-2">
-              Core Features
-            </h6>
-            <!-- List -->
-            <ul role="list" class="my-8 space-y-4 text-left px-3">
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Unlimited Users</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Unlimited Vendors</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Custom Integrations</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>SAML Integration</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Assessment Report</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Risk Scoring</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Search AI</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Questionnaire Templates</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Control Grading</span>
-              </li>
-            </ul>
+            class="flex items-center justify-center md:justify-between flex-wrap gap-6 w-full mt-8"
+          >
+            <img
+              class="h-[50px] w-auto"
+              src="./img/logo/Brand 1.png"
+              alt="Brand 1"
+            />
+            <img
+              class="h-[50px] w-auto"
+              src="./img/logo/Brand 2.png"
+              alt="Brand 2"
+            />
+            <img
+              class="h-[50px] w-auto"
+              src="./img/logo/Brand 3.png"
+              alt="Brand 3"
+            />
+            <img
+              class="h-[50px] w-auto"
+              src="./img/logo/Brand 4.png"
+              alt="Brand 4"
+            />
+            <img
+              class="h-[50px] w-auto"
+              src="./img/logo/Brand 5.png"
+              alt="Brand 5"
+            />
           </div>
-          <!-- Pricing Card -->
+        </div>
+      </section>
+
+      <section class="bg-white" id="features">
+        <div class="container">
+          <div class="mb-8 lg:mb-16 text-center">
+            <h2
+              class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900"
+            >
+              AI Powered TPRM Due Diligence
+            </h2>
+          </div>
           <div
-            class="flex flex-col p-2 mx-auto max-w-lg text-center text-white bg-[#ffffff21] rounded-lg border border-gray-100 shadow w-full">
-            <div class="p-4 bg-[#ffffff15] rounded-md h-[120px]">
-              <h3 class="text-2xl font-semibold">Enterprise</h3>
-              <div class="flex justify-center items-baseline mt-4">
-                <span class="mr-2 text-4xl font-extrabold">$20,000</span>
-                <span class="text-white">/yr</span>
-              </div>
+            class="space-y-5 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-5 md:space-y-0"
+          >
+            <!-- Card 1 -->
+            <div class="p-4 bg-white border rounded-2xl">
+              <h3 class="mb-2 text-xl font-bold text-title">
+                No More Vendor Delays
+              </h3>
+              <p class="text-desc mb-5 desc">
+                DocuBark extracts data from vendor documents to complete your
+                security questionnaire faster.
+              </p>
+              <img class="mt-6" src="./img/progress.png" alt="" />
             </div>
-            <p class="mt-5 text-[24px]">40,000 Questions Included</p>
-            <h6 class="text-h6 font-semibold mt-5 bg-[#ffffff15] py-2">
-              Core Features
-            </h6>
-            <!-- List -->
-            <ul role="list" class="my-8 space-y-4 text-left px-3">
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Unlimited Users</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Unlimited Vendors</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Custom Integrations</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>SAML Integration</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Assessment Report</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Risk Scoring</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Search AI</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Questionnaire Templates</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Control Grading</span>
-              </li>
-            </ul>
+
+            <!-- Card 2 -->
+            <div class="p-4 bg-white border rounded-2xl">
+              <h3 class="mb-2 text-xl font-bold text-title">
+                Reliable, Verified Data
+              </h3>
+              <p class="text-desc mb-5 desc">
+                DocuBark uses official vendor documents, giving you accurate
+                answers every time.
+              </p>
+              <img class="mt-6" src="./img/area.svg" alt="" />
+            </div>
+
+            <!-- Card 3 -->
+            <div class="p-4 bg-white border rounded-2xl">
+              <h3 class="mb-2 text-xl font-bold text-title">
+                Let AI Do the Work
+              </h3>
+              <p class="text-desc mb-5 desc">
+                DocuBark’s AI analyzes responses and scores vendors on key
+                controls, saving you time.
+              </p>
+              <img class="mt-6" src="./img/bar.png" alt="" />
+            </div>
+
+            <!-- Card 4 -->
+            <div class="p-4 bg-white border rounded-2xl">
+              <h3 class="mb-2 text-xl font-bold text-title">
+                Full Audit Trail
+              </h3>
+              <p class="text-desc mb-5 desc">
+                Get a complete assessment with vendor scores, summaries, and
+                follow-up actions, all audit-ready.
+              </p>
+              <img class="mt-6" src="./img/Group 4.png" alt="" />
+            </div>
           </div>
         </div>
-        <div class="mt-8 text-center">
-          <a href="" class="px-5 py-3 border rounded-full text-white">Ready to dive in? Explore the platform ></a>
+      </section>
+
+      <section class="bg-white" id="why-docuBark">
+        <div class="container">
+          <div class="mb-8 lg:mb-16 text-center max-w-[650px] m-auto">
+            <h2
+              class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900"
+            >
+              Why DocuBark?
+            </h2>
+            <p>
+              DocuBark uses advanced AI to quickly parse vendor documents, fill
+              out questionnaires, and deliver accurate insights — saving you
+              time on every review.
+            </p>
+          </div>
+          <div
+            class="space-y-5 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5 md:space-y-0"
+          >
+            <div class="p-4 bg-white border rounded-2xl">
+              <div
+                class="flex justify-center items-center mb-4 w-[50px] h-[50px] rounded-full bg-primary lg:h-12 lg:w-12"
+              >
+                <iconify-icon
+                  icon="mdi:code"
+                  class="text-[24px] text-white"
+                ></iconify-icon>
+              </div>
+              <h3 class="mb-2 text-xl font-bold">Easy to Use</h3>
+              <p class="text-desc">
+                No complex setup needed. Just upload your documents, and
+                DocuBark starts working right away, making it easy to get
+                results in minutes.
+              </p>
+            </div>
+
+            <div class="p-4 bg-white border rounded-2xl">
+              <div
+                class="flex justify-center items-center mb-4 w-[50px] h-[50px] rounded-full bg-primary lg:h-12 lg:w-12"
+              >
+                <iconify-icon
+                  icon="mdi:code"
+                  class="text-[24px] text-white"
+                ></iconify-icon>
+              </div>
+              <h3 class="mb-2 text-xl font-bold">Safe & Transparent AI</h3>
+              <p class="text-desc">
+                DocuBark’s "Show Your Work" AI gives you visibility into each
+                answer, showing sources and reasoning so you can trust every
+                result.
+              </p>
+            </div>
+            <div class="p-4 bg-white border rounded-2xl">
+              <div
+                class="flex justify-center items-center mb-4 w-[50px] h-[50px] rounded-full bg-primary lg:h-12 lg:w-12"
+              >
+                <iconify-icon
+                  icon="mdi:code"
+                  class="text-[24px] text-white"
+                ></iconify-icon>
+              </div>
+              <h3 class="mb-2 text-xl font-bold">Customizable to Your Needs</h3>
+              <p class="text-desc">
+                Adjust DocuBark to suit your process—from custom prompts to
+                tailored questionnaire settings, it adapts to fit your workflow.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="contact">
-      <div class="container">
-        <div class="space-y-5 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5 md:space-y-0">
-          <div class="p-4 bg-white border rounded-2xl">
-            <h3 class="mb-2 text-xl font-bold">Customer support</h3>
-            <p class="text-desc">
-              If you are unable to log into your account, please contact our
-              support team. A ticket will be created and one of our support
-              team members will assist you via email.
+      <section id="pricing" class="bg-[#070709]">
+        <div class="container">
+          <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">
+              Direct, upfront pricing
+            </h2>
+            <p class="text-white">
+              No guesswork or hidden fees. Just transparent pricing plans.
             </p>
-            <a href="mailto:someone@example.com">
-              <button class="px-5 py-3 text-white bg-[#013de6] rounded-lg font-medium mt-5">
-                Contact support
-              </button>
-            </a>
           </div>
-
-          <div class="p-4 bg-white border rounded-2xl">
-            <h3 class="mb-2 text-xl font-bold">
-              Assess Your Vendors In 5 Minutes
-            </h3>
-            <p class="text-desc">
-              Navigate our help center articles for assistance on various
-              platform and partnership topics. From quick Frequently Asked
-              Questions to in-depth guides, we have you covered.
-            </p>
-            <a href="https://docubark.setmore.com/">
-              <button class="px-5 py-3 text-white bg-[#013de6] rounded-lg font-medium mt-5">
-                Book Demo
-              </button>
-            </a>
-          </div>
-          <div class="p-4 bg-white border rounded-2xl">
-            <h3 class="mb-2 text-xl font-bold">Explore the Platform</h3>
-            <p class="text-desc">
-              Navigate our help center articles for assistance on various
-              platform and partnership topics. From quick Frequently Asked
-              Questions to in-depth guides, we have you covered.
-            </p>
-            <a href="https://app.docubark.com/Signup">
-              <button class="px-5 py-3 text-white bg-[#013de6] rounded-lg font-medium mt-5">
-                Explore the Platform
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--!Footer   -->
-
-    <footer class="bg-black">
-      <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div class="md:flex md:justify-between">
-          <div class="mb-6 md:mb-0">
-            <h3 class="mb-3 text-xl font-medium text-white">
-              Subscribe to our newsletter
-            </h3>
-            <p class="mb-5 text-sm font-medium text-white">
-              The latest news about TPRM, case studies, sent to your inbox
-              monthly.
-            </p>
-            <form>
-              <div data-style="clean" class="flex items-end mb-3">
-                <div class="flex items-center w-full max-w-md mb-3 seva-fields formkit-fields">
-                  <div class="relative w-full mr-3 formkit-field">
-                    <label for="member_email" class="hidden mb-2 text-sm font-medium text-white">Email address</label>
-                    <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
-                      <svg class="w-3.5 h-3.5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor" viewBox="0 0 20 16">
-                        <path
-                          d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z">
-                        </path>
-                        <path
-                          d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z">
-                        </path>
-                      </svg>
-                    </div>
-                    <input id="member_email"
-                      class="formkit-input bg-[#ffffff0f] border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
-                      name="email_address" aria-label="Email Address" placeholder="Your email address..." required=""
-                      type="email" />
-                  </div>
-                  <button data-element="submit" class="formkit-submit">
-                    <span
-                      class="px-5 py-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg cursor-pointer hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Subscribe</span>
-                  </button>
+          <div
+            class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 xl:gap-10 lg:space-y-0"
+          >
+            <!-- Pricing Card -->
+            <div
+              class="flex flex-col p-2 mx-auto max-w-lg text-center text-white bg-[#ffffff21] rounded-lg border border-gray-100 shadow w-full"
+            >
+              <div class="p-4 bg-[#ffffff15] rounded-md h-[120px]">
+                <h3 class="text-2xl font-semibold">Growth</h3>
+                <div class="flex justify-center items-baseline mt-4">
+                  <span class="mr-2 text-4xl font-extrabold">$7,500</span>
+                  <span class="text-white">/yr</span>
                 </div>
               </div>
-            </form>
-            <div>
-              <h2 class="mb-6 text-sm font-semibold text-white uppercase">
-                Location
-              </h2>
-              <ul class="text-white font-medium flex flex-col gap-2">
-                <li>
-                  <a href="#" class="hover:underline">333 W Wacker</a>
+              <p class="mt-5 text-[24px]">5,000 Questions Included</p>
+              <h6 class="text-h6 font-semibold mt-5 bg-[#ffffff15] py-2">
+                Core features:
+              </h6>
+              <!-- List -->
+              <ul role="list" class="my-8 space-y-4 text-left px-3">
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Unlimited Users</span>
                 </li>
-                <li>
-                  <a href="#" class="hover:underline">Chicago, IL 60613</a>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Unlimited Vendors</span>
                 </li>
-                <li>
-                  <a href="#" class="hover:underline">United States of America</a>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Custom Integrations</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>SAML Integration </span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Assessment Report</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Risk Scoring</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Search AI</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Questionnaire Templates</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Control Grading</span>
+                </li>
+              </ul>
+            </div>
+            <!-- Pricing Card -->
+            <div
+              class="flex flex-col p-2 mx-auto max-w-lg text-center text-white bg-[#ffffff21] rounded-lg border border-gray-100 shadow w-full"
+            >
+              <div class="p-4 bg-[#ffffff15] rounded-md h-[120px]">
+                <h3 class="text-2xl font-semibold">Scale</h3>
+                <div class="flex justify-center items-baseline mt-4">
+                  <span class="mr-2 text-4xl font-extrabold">$10,000</span>
+                  <span class="text-white">/yr</span>
+                </div>
+              </div>
+              <p class="mt-5 text-[24px]">10,000 Questions Included</p>
+              <h6 class="text-h6 font-semibold mt-5 bg-[#ffffff15] py-2">
+                Core Features
+              </h6>
+              <!-- List -->
+              <ul role="list" class="my-8 space-y-4 text-left px-3">
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Unlimited Users</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Unlimited Vendors</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Custom Integrations</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>SAML Integration</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Assessment Report</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Risk Scoring</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Search AI</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Questionnaire Templates</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Control Grading</span>
+                </li>
+              </ul>
+            </div>
+            <!-- Pricing Card -->
+            <div
+              class="flex flex-col p-2 mx-auto max-w-lg text-center text-white bg-[#ffffff21] rounded-lg border border-gray-100 shadow w-full"
+            >
+              <div class="p-4 bg-[#ffffff15] rounded-md h-[120px]">
+                <h3 class="text-2xl font-semibold">Enterprise</h3>
+                <div class="flex justify-center items-baseline mt-4">
+                  <span class="mr-2 text-4xl font-extrabold">$20,000</span>
+                  <span class="text-white">/yr</span>
+                </div>
+              </div>
+              <p class="mt-5 text-[24px]">40,000 Questions Included</p>
+              <h6 class="text-h6 font-semibold mt-5 bg-[#ffffff15] py-2">
+                Core Features
+              </h6>
+              <!-- List -->
+              <ul role="list" class="my-8 space-y-4 text-left px-3">
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Unlimited Users</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Unlimited Vendors</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Custom Integrations</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>SAML Integration</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Assessment Report</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Risk Scoring</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Search AI</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Questionnaire Templates</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Control Grading</span>
                 </li>
               </ul>
             </div>
           </div>
-          <div>
-            <h2 class="mb-6 text-sm font-semibold text-white uppercase">
-              Quick Links
-            </h2>
-            <ul class="text-white font-medium flex flex-col gap-2">
-              <li>
-                <a href="#" class="hover:underline">Home</a>
-              </li>
-              <li>
-                <a href="#" class="hover:underline">Features</a>
-              </li>
-              <li>
-                <a href="#" class="hover:underline">Why DocuBark</a>
-              </li>
-              <li>
-                <a href="#" class="hover:underline">Pricing</a>
-              </li>
-              <li>
-                <a href="#" class="hover:underline">Contact</a>
-              </li>
-              <li>
-                <a href="https://app.docubark.com/login" class="hover:underline">Login</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2 class="mb-6 text-sm font-semibold text-white uppercase">
-              Legal
-            </h2>
-            <ul class="text-white font-medium flex flex-col gap-2">
-              <li>
-                <a href="https://app.docubark.com/privacy-policy" class="hover:underline">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="https://app.docubark.com/tos" class="hover:underline">Terms &amp; Conditions</a>
-              </li>
-            </ul>
+          <div class="mt-8 text-center">
+            <a
+              href="https://app.docubark.com/Signup"
+              class="px-5 py-3 border rounded-full text-white"
+              >Ready to dive in? Explore the platform ></a
+            >
           </div>
         </div>
-      </div>
-    </footer>
-  </div>
+      </section>
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
-  <script src="src/script.js"></script>
-</body>
+      <section id="contact">
+        <div class="container">
+          <div
+            class="space-y-5 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-5 md:space-y-0"
+          >
+            <div class="p-4 bg-white border rounded-2xl">
+              <h3 class="mb-2 text-xl font-bold">Customer support</h3>
+              <p class="text-desc">
+                Need assistance? Contact our support team for quick help with all your TPRM needs.
+              </p>
+              <a href="mailto:someone@example.com">
+                <button
+                  class="px-5 py-3 text-white bg-primary rounded-lg font-medium mt-5"
+                >
+                  Contact support
+                </button>
+              </a>
+            </div>
 
+            <div class="p-4 bg-white border rounded-2xl">
+              <h3 class="mb-2 text-xl font-bold">Book Demo</h3>
+              <p class="text-desc">
+                See how DocuBark transforms TPRM—schedule your personalized demo.
+              </p>
+              <a href="https://docubark.setmore.com/">
+                <button
+                  class="px-5 py-3 text-white bg-primary rounded-lg font-medium mt-5"
+                >
+                  Book Demo
+                </button>
+              </a>
+            </div>
+            <div class="p-4 bg-white border rounded-2xl">
+              <h3 class="mb-2 text-xl font-bold">Explore the Platform</h3>
+              <p class="text-desc">
+                Sign up for free to test-drive DocuBark’s powerful TPRM tools
+                and see the difference firsthand.
+              </p>
+              <a href="https://app.docubark.com/Signup">
+                <button
+                  class="px-5 py-3 text-white bg-primary rounded-lg font-medium mt-5"
+                >
+                  Explore the Platform
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--!Footer   -->
+
+      <footer class="bg-black">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+          <div class="md:flex md:justify-between">
+            <div class="mb-6 md:mb-0">
+              <h3 class="mb-3 text-xl font-medium text-white">
+                Subscribe to our newsletter
+              </h3>
+              <p class="mb-5 text-sm font-medium text-white">
+                The latest news about TPRM, case studies, sent to your inbox
+                monthly.
+              </p>
+              <form>
+                <div data-style="clean" class="flex items-end mb-3">
+                  <div
+                    class="flex items-center w-full max-w-md mb-3 seva-fields formkit-fields"
+                  >
+                    <div class="relative w-full mr-3 formkit-field">
+                      <label
+                        for="member_email"
+                        class="hidden mb-2 text-sm font-medium text-white"
+                        >Email address</label
+                      >
+                      <div
+                        class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none"
+                      >
+                        <svg
+                          class="w-3.5 h-3.5 text-white"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 20 16"
+                        >
+                          <path
+                            d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"
+                          ></path>
+                          <path
+                            d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <input
+                        id="member_email"
+                        class="formkit-input bg-[#ffffff0f] border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
+                        name="email_address"
+                        aria-label="Email Address"
+                        placeholder="Your email address..."
+                        required=""
+                        type="email"
+                      />
+                    </div>
+                    <button data-element="submit" class="formkit-submit">
+                      <span
+                        class="px-5 py-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg cursor-pointer hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        >Subscribe</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <div>
+                <h2 class="mb-6 text-sm font-semibold text-white uppercase">
+                  Location
+                </h2>
+                <ul class="text-white font-medium flex flex-col gap-2">
+                  <li>
+                    <a href="#" class="hover:underline">333 W Wacker</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:underline">Chicago, IL 60613</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:underline"
+                      >United States of America</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-white uppercase">
+                Quick Links
+              </h2>
+              <ul class="text-white font-medium flex flex-col gap-2">
+                <li>
+                  <a href="#" class="hover:underline">Home</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Features</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Why DocuBark</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Pricing</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Contact</a>
+                </li>
+                <li>
+                  <a
+                    href="https://app.docubark.com/login"
+                    class="hover:underline"
+                    >Login</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold text-white uppercase">
+                Legal
+              </h2>
+              <ul class="text-white font-medium flex flex-col gap-2">
+                <li>
+                  <a
+                    href="https://app.docubark.com/privacy-policy"
+                    class="hover:underline"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="https://app.docubark.com/tos" class="hover:underline"
+                    >Terms &amp; Conditions</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script src="src/script.js"></script>
+  </body>
 </html>
